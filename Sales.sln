@@ -100,7 +100,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Sales.EventsWebApi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{3A505FC6-CBD6-4D4F-BF48-329C3148282B}"
 	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
 		src\BuildFiles\.stylecop.json = src\BuildFiles\.stylecop.json
 		src\BuildFiles\.stylecop.ruleset = src\BuildFiles\.stylecop.ruleset
 		Directory.Build.props = Directory.Build.props
@@ -150,6 +149,25 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Sales.CommandsWebApis", "src\Infrastructure\Hexalith.Sales.CommandsWebApis\Hexalith.Sales.CommandsWebApis.csproj", "{D4B2DB60-8A29-4524-872F-18564A602F68}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Sales.UnitTests", "test\Hexalith.Sales.UnitTests\Hexalith.Sales.UnitTests.csproj", "{D6FD414B-76FC-4246-985D-740A4FEB9153}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_global", "_global", "{DD678455-958B-44A5-B819-4E611C3DC048}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_global", "_global", "{298AFAAC-D82C-4FE3-B916-7B1B6A82D9B5}"
+	ProjectSection(SolutionItems) = preProject
+		Hexalith\.editorconfig = Hexalith\.editorconfig
+		Hexalith\.gitignore = Hexalith\.gitignore
+		Hexalith\.readthedocs.yaml = Hexalith\.readthedocs.yaml
+		Hexalith\.stylecop.json = Hexalith\.stylecop.json
+		Hexalith\.stylecop.ruleset = Hexalith\.stylecop.ruleset
+		Hexalith\LICENSE.txt = Hexalith\LICENSE.txt
+		Hexalith\README.md = Hexalith\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -412,6 +430,8 @@ Global
 		{7320A1A7-7CFC-472F-B280-00B3F2511F18} = {971DE0DA-285B-4912-BA93-E74411400F87}
 		{D4B2DB60-8A29-4524-872F-18564A602F68} = {971DE0DA-285B-4912-BA93-E74411400F87}
 		{D6FD414B-76FC-4246-985D-740A4FEB9153} = {8B5B1376-6E74-4BE2-8688-5F4B604B0370}
+		{DD678455-958B-44A5-B819-4E611C3DC048} = {6DCC825D-02D0-4F25-9A3D-A530736AB837}
+		{298AFAAC-D82C-4FE3-B916-7B1B6A82D9B5} = {D2DA3040-462E-4E0E-9CFE-3EA95FA3D014}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09CBB595-8996-4C7F-9C48-4C58AD9293AC}
