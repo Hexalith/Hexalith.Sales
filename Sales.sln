@@ -104,7 +104,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{3A505F
 		src\BuildFiles\.stylecop.json = src\BuildFiles\.stylecop.json
 		src\BuildFiles\.stylecop.ruleset = src\BuildFiles\.stylecop.ruleset
 		Directory.Build.props = Directory.Build.props
+		.github\workflows\hexalith_build.yml = .github\workflows\hexalith_build.yml
 		src\BuildFiles\Project.Common.props = src\BuildFiles\Project.Common.props
+		.github\workflows\semgrep.yml = .github\workflows\semgrep.yml
+		.github\workflows\sonarqube.yml = .github\workflows\sonarqube.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servers", "Servers", "{E0E8D9A4-0B77-4F2D-BD6E-7931FEE42ACB}"
@@ -146,7 +149,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Sales.DaprRuntime.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Sales.CommandsWebApis", "src\Infrastructure\Hexalith.Sales.CommandsWebApis\Hexalith.Sales.CommandsWebApis.csproj", "{D4B2DB60-8A29-4524-872F-18564A602F68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Sales.UnitTests", "test\Hexalith.Sales.UnitTests\Hexalith.Sales.UnitTests.csproj", "{0FB784CA-270E-423F-9002-2B16A692C461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hexalith.Sales.UnitTests", "test\Hexalith.Sales.UnitTests\Hexalith.Sales.UnitTests.csproj", "{D6FD414B-76FC-4246-985D-740A4FEB9153}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -342,10 +345,10 @@ Global
 		{D4B2DB60-8A29-4524-872F-18564A602F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B2DB60-8A29-4524-872F-18564A602F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B2DB60-8A29-4524-872F-18564A602F68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0FB784CA-270E-423F-9002-2B16A692C461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FB784CA-270E-423F-9002-2B16A692C461}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FB784CA-270E-423F-9002-2B16A692C461}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FB784CA-270E-423F-9002-2B16A692C461}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6FD414B-76FC-4246-985D-740A4FEB9153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FD414B-76FC-4246-985D-740A4FEB9153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FD414B-76FC-4246-985D-740A4FEB9153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FD414B-76FC-4246-985D-740A4FEB9153}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -408,7 +411,7 @@ Global
 		{FE54766B-D066-44C5-8DC9-36AAE8809E59} = {971DE0DA-285B-4912-BA93-E74411400F87}
 		{7320A1A7-7CFC-472F-B280-00B3F2511F18} = {971DE0DA-285B-4912-BA93-E74411400F87}
 		{D4B2DB60-8A29-4524-872F-18564A602F68} = {971DE0DA-285B-4912-BA93-E74411400F87}
-		{0FB784CA-270E-423F-9002-2B16A692C461} = {8B5B1376-6E74-4BE2-8688-5F4B604B0370}
+		{D6FD414B-76FC-4246-985D-740A4FEB9153} = {8B5B1376-6E74-4BE2-8688-5F4B604B0370}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {09CBB595-8996-4C7F-9C48-4C58AD9293AC}
