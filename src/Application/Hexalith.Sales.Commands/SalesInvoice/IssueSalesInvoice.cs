@@ -14,13 +14,13 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Application.Sales.Commands;
+namespace Hexalith.Sales.Commands.SalesInvoice;
 
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-using Hexalith.Domain.ValueObjets;
 using Hexalith.Extensions;
+using Hexalith.Sales.Domain.SalesInvoice;
 
 /// <summary>
 /// Class SalesInvoiceRegistered.

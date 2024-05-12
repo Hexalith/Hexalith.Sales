@@ -14,14 +14,14 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Application.Sales.Helpers;
+namespace Hexalith.Sales.Application.SalesInvoice.Helpers;
 
 using FluentValidation;
 
 using Hexalith.Application.Commands;
-using Hexalith.Application.Sales.CommandHandlers;
-using Hexalith.Application.Sales.Commands;
-using Hexalith.Domain.Events;
+using Hexalith.Sales.Application.SalesInvoice.CommandHandlers;
+using Hexalith.Sales.Commands.SalesInvoice;
+using Hexalith.Sales.Events.SalesInvoice;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;

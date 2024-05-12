@@ -3,6 +3,6 @@
 		<TargetFramework>$(CommonTargetFrameworks)</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\Hexalith.Sales.Events\Hexalith.Sales.Events.csproj" />
+		<ProjectReference Include="..\Hexalith.Sales.Domain.Abstractions\Hexalith.Sales.Domain.Abstractions.csproj" />
 	</ItemGroup>
 </Project>

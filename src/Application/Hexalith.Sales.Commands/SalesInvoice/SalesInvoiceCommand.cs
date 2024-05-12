@@ -14,16 +14,15 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Application.Sales.Commands;
+namespace Hexalith.Sales.Commands.SalesInvoice;
 
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 using Hexalith.Application.Organizations.Commands;
-using Hexalith.Application.Organizations.Notifications;
-using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Events;
 using Hexalith.Extensions;
+using Hexalith.Sales.Domain.Helpers;
 
 /// <summary>
 /// Class SalesInvoiceEvent.
@@ -31,8 +30,7 @@ using Hexalith.Extensions;
 /// </summary>
 /// <seealso cref="BaseEvent" />
 [DataContract]
-[Serializable]
-public abstract class SalesInvoiceCommand : CompanyEntityCommand
+public class SalesInvoiceCommand : CompanyEntityCommand
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="SalesInvoiceCommand"/> class.
@@ -60,8 +58,8 @@ public abstract class SalesInvoiceCommand : CompanyEntityCommand
     }
 
     /// <inheritdoc/>
-    protected override string DefaultAggregateId() => SalesInvoice.GetAggregateId(PartitionId, CompanyId, OriginId, Id);
+    protected override string DefaultAggregateId() => SalesDomainHelper.GetSalesInvoiceAggregateId(PartitionId, CompanyId, OriginId, Id);
 
     /// <inheritdoc/>
-    protected override string DefaultAggregateName() => SalesInvoice.GetAggregateName();
+    protected override string DefaultAggregateName() => SalesDomainHelper.SalesInvoiceAggregateName;
 }

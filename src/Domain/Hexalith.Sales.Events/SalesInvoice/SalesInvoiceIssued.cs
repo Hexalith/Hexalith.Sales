@@ -14,21 +14,21 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Domain.Events;
+namespace Hexalith.Sales.Events.SalesInvoice;
 
+using System.Collections.Immutable;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-using Hexalith.Domain.ValueObjets;
 using Hexalith.Extensions;
+using Hexalith.Sales.Domain.SalesInvoice;
 
 /// <summary>
 /// Class SalesInvoiceRegistered.
-/// Implements the <see cref="Hexalith.Domain.Events.SalesInvoiceEvent" />.
+/// Implements the <see cref="SalesInvoiceEvent" />.
 /// </summary>
-/// <seealso cref="Hexalith.Domain.Events.SalesInvoiceEvent" />
+/// <seealso cref="SalesInvoiceEvent" />
 [DataContract]
-[Serializable]
 public class SalesInvoiceIssued : SalesInvoiceEvent
 {
     /// <summary>
@@ -57,7 +57,7 @@ public class SalesInvoiceIssued : SalesInvoiceEvent
         CreatedDate = createdDate;
         CustomerId = customerId;
         CurrencyId = currencyId;
-        Lines = lines.Select(p => new SalesInvoiceLine(p)).ToList();
+        Lines = lines.ToImmutableList();
     }
 
     /// <summary>

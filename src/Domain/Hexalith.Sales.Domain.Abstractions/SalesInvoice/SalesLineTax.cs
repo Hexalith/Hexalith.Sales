@@ -13,7 +13,7 @@
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
-namespace Hexalith.Domain.ValueObjets;
+namespace Hexalith.Sales.Domain.SalesInvoice;
 
 using System;
 using System.Diagnostics.CodeAnalysis;

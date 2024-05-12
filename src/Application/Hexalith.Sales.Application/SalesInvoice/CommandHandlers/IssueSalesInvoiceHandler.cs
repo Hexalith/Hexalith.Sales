@@ -14,7 +14,7 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Application.Sales.CommandHandlers;
+namespace Hexalith.Sales.Application.SalesInvoice.CommandHandlers;
 
 using System;
 using System.Collections.Generic;
@@ -23,26 +23,25 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using Hexalith.Application.Commands;
-using Hexalith.Application.Sales.Commands;
 using Hexalith.Domain.Aggregates;
-using Hexalith.Domain.Events;
 using Hexalith.Domain.Messages;
+using Hexalith.Sales.Commands.SalesInvoice;
+using Hexalith.Sales.Domain.SalesInvoice;
+using Hexalith.Sales.Events.SalesInvoice;
 
 using Microsoft.Extensions.Logging;
 
 /// <summary>
 /// Class RegisterSalesInvoiceHandler.
-/// Implements the <see cref="Hexalith.Application.Commands.CommandHandler{Hexalith.Application.Sales.Commands.IssueSalesInvoice}" />.
+/// Implements the <see cref="Application.Commands.CommandHandler{Sales.Commands.IssueSalesInvoice}" />.
 /// </summary>
-/// <seealso cref="Hexalith.Application.Commands.CommandHandler{Hexalith.Application.Sales.Commands.IssueSalesInvoice}" />
-public partial class IssueSalesInvoiceHandler : CommandHandler<IssueSalesInvoice>
+/// <seealso cref="Application.Commands.CommandHandler{Sales.Commands.IssueSalesInvoice}" />
+public class IssueSalesInvoiceHandler : CommandHandler<IssueSalesInvoice>
 {
     /// <summary>
     /// The logger.
     /// </summary>
-#pragma warning disable IDE0052 // Remove unread private members
     private readonly ILogger<IssueSalesInvoiceHandler> _logger;
-#pragma warning restore IDE0052 // Remove unread private members
 
     /// <summary>
     /// Initializes a new instance of the <see cref="IssueSalesInvoiceHandler"/> class.
