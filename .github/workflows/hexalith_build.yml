@@ -52,8 +52,6 @@ jobs:
         dotnet build './src/Infrastructure/Hexalith.Sales.DaprRuntime/Hexalith.Sales.DaprRuntime.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Infrastructure/Hexalith.Sales.DaprRuntime.Abstractions/Hexalith.Sales.DaprRuntime.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
         dotnet build './src/Infrastructure/Hexalith.Sales.EventsWebApis/Hexalith.Sales.EventsWebApis.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-        dotnet build './src/Infrastructure/Hexalith.Sales.GoogleMaps/Hexalith.Sales.GoogleMaps.csproj' --configuration Release -p:Version=${{ env.VERSION }}
-        dotnet build './src/UI/Hexalith.PostalAddresses.UI/Hexalith.PostalAddresses.UI.csproj' --configuration Release -p:Version=${{ env.VERSION }}
     - name: Unit Tests
       run: |
         dotnet test -c Release --no-restore --no-build ./test/Hexalith.Sales.UnitTests/Hexalith.Sales.UnitTests.csproj
