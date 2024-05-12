@@ -1,5 +1,7 @@
 # Hexalith.Sales
 Hexalith Sales microservice
+## Status
+The software is in preview
 <br/>
 [![Build status](https://github.com/Hexalith/Hexalith.Sales/actions/workflows/hexalith_build.yml/badge.svg)](https://github.com/Hexalith/Hexalith.Sales/actions)
 [![NuGet](https://img.shields.io/nuget/v/Hexalith.Sales.Domain.Abstractions.svg)](https://www.nuget.org/packages/Hexalith.Sales.Domain.Abstractions)
