@@ -1,4 +1,4 @@
-﻿namespace Hexalith.Sales.Domain.SalesInvoice;
+﻿namespace Hexalith.Sales.Domain.SalesInvoices;
 
 using System.Runtime.Serialization;
 

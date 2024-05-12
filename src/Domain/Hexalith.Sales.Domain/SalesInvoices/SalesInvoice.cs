@@ -14,7 +14,7 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Sales.Domain.SalesInvoice;
+namespace Hexalith.Sales.Domain.SalesInvoices;
 
 using System.Collections.Immutable;
 using System.Diagnostics.CodeAnalysis;
@@ -24,7 +24,7 @@ using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Events;
 using Hexalith.Domain.Exceptions;
 using Hexalith.Sales.Domain.Helpers;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Events.SalesInvoices;
 
 /// <summary>
 /// Class SalesInvoice.

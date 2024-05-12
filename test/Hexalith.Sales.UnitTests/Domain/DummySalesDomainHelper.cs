@@ -6,8 +6,8 @@
 
 namespace Hexalith.Sales.UnitTests.Domain;
 
-using Hexalith.Sales.Domain.SalesInvoice;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Domain.SalesInvoices;
+using Hexalith.Sales.Events.SalesInvoices;
 
 public static class DummySalesDomainHelper
 {

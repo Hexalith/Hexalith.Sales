@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 using Hexalith.Application.Metadatas;
 using Hexalith.Infrastructure.DaprRuntime.Projections;
-using Hexalith.Sales.Domain.SalesInvoice;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Domain.SalesInvoices;
+using Hexalith.Sales.Events.SalesInvoices;
 
 /// <summary>
 /// Sales invoice projection update handler base class.
-/// Implements the <see cref="Hexalith.Infrastructure.DaprRuntime.Projections.KeyValueActorProjectionUpdateEventHandlerBase{TSalesInvoiceEvent, Hexalith.Sales.Domain.SalesInvoice.SalesInvoice}" />.
+/// Implements the <see cref="Hexalith.Infrastructure.DaprRuntime.Projections.KeyValueActorProjectionUpdateEventHandlerBase{TSalesInvoiceEvent, SalesInvoice}" />.
 /// </summary>
 /// <typeparam name="TSalesInvoiceEvent">The type of the t sales invoice event.</typeparam>
-/// <seealso cref="Hexalith.Infrastructure.DaprRuntime.Projections.KeyValueActorProjectionUpdateEventHandlerBase{TSalesInvoiceEvent, Hexalith.Sales.Domain.SalesInvoice.SalesInvoice}" />
+/// <seealso cref="Hexalith.Infrastructure.DaprRuntime.Projections.KeyValueActorProjectionUpdateEventHandlerBase{TSalesInvoiceEvent, SalesInvoice}" />
 public class SalesInvoiceProjectionUpdateHandler<TSalesInvoiceEvent> : KeyValueActorProjectionUpdateEventHandlerBase<TSalesInvoiceEvent, SalesInvoice>
     where TSalesInvoiceEvent : SalesInvoiceEvent
 {

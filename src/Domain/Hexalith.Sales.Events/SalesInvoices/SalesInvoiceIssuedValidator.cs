@@ -14,7 +14,7 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Sales.Events.SalesInvoice;
+namespace Hexalith.Sales.Events.SalesInvoices;
 
 using FluentValidation;
 

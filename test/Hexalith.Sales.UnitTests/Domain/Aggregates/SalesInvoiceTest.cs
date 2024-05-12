@@ -2,7 +2,7 @@
 
 using FluentAssertions;
 
-using Hexalith.Sales.Domain.SalesInvoice;
+using Hexalith.Sales.Domain.SalesInvoices;
 using Hexalith.TestMocks;
 
 public class SalesInvoiceTest : SerializationTestBase

@@ -17,8 +17,8 @@
 namespace Hexalith.Sales.EventsWebApis.Projections;
 
 using Hexalith.Infrastructure.DaprRuntime.Projections;
-using Hexalith.Sales.Domain.SalesInvoice;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Domain.SalesInvoices;
+using Hexalith.Sales.Events.SalesInvoices;
 
 /// <summary>
 /// Class SalesInvoiceRegisteredProjectionUpdateHandler.

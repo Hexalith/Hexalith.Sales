@@ -14,7 +14,7 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Sales.Application.SalesInvoice.CommandHandlers;
+namespace Hexalith.Sales.Application.SalesInvoices.CommandHandlers;
 
 using System;
 using System.Collections.Generic;
@@ -25,17 +25,17 @@ using System.Threading.Tasks;
 using Hexalith.Application.Commands;
 using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Messages;
-using Hexalith.Sales.Commands.SalesInvoice;
-using Hexalith.Sales.Domain.SalesInvoice;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Commands.SalesInvoices;
+using Hexalith.Sales.Domain.SalesInvoices;
+using Hexalith.Sales.Events.SalesInvoices;
 
 using Microsoft.Extensions.Logging;
 
 /// <summary>
 /// Class RegisterSalesInvoiceHandler.
-/// Implements the <see cref="Application.Commands.CommandHandler{Sales.Commands.IssueSalesInvoice}" />.
+/// Implements the <see cref="Application.Commands.CommandHandler{Commands.IssueSalesInvoice}" />.
 /// </summary>
-/// <seealso cref="Application.Commands.CommandHandler{Sales.Commands.IssueSalesInvoice}" />
+/// <seealso cref="Application.Commands.CommandHandler{Commands.IssueSalesInvoice}" />
 public class IssueSalesInvoiceHandler : CommandHandler<IssueSalesInvoice>
 {
     /// <summary>

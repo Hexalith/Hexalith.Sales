@@ -4,8 +4,8 @@ using System.Diagnostics.CodeAnalysis;
 
 using Hexalith.Application.Projections;
 using Hexalith.Infrastructure.DaprRuntime.Helpers;
-using Hexalith.Sales.Domain.SalesInvoice;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Domain.SalesInvoices;
+using Hexalith.Sales.Events.SalesInvoices;
 using Hexalith.Sales.EventsWebApis.Controllers;
 using Hexalith.Sales.EventsWebApis.Projections;
 

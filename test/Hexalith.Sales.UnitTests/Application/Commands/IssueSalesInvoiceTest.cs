@@ -19,7 +19,7 @@ namespace Hexalith.Sales.UnitTests.Application.Commands;
 using FluentAssertions;
 
 using Hexalith.Application.Commands;
-using Hexalith.Sales.Commands.SalesInvoice;
+using Hexalith.Sales.Commands.SalesInvoices;
 using Hexalith.TestMocks;
 
 /// <summary>

@@ -19,9 +19,9 @@ namespace Hexalith.Sales.Application.Helpers;
 using FluentValidation;
 
 using Hexalith.Application.Commands;
-using Hexalith.Sales.Application.SalesInvoice.CommandHandlers;
-using Hexalith.Sales.Commands.SalesInvoice;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Application.SalesInvoices.CommandHandlers;
+using Hexalith.Sales.Commands.SalesInvoices;
+using Hexalith.Sales.Events.SalesInvoices;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;

@@ -1,6 +1,6 @@
 ﻿namespace Hexalith.Sales.UnitTests.Application;
 
-using Hexalith.Sales.Commands.SalesInvoice;
+using Hexalith.Sales.Commands.SalesInvoices;
 using Hexalith.Sales.UnitTests.Domain;
 
 public static class DummySalesApplicationHelper

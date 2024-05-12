@@ -26,11 +26,11 @@ using Hexalith.Sales.Application.Helpers;
 using Hexalith.Domain.Aggregates;
 using Hexalith.Infrastructure.DaprRuntime.Handlers;
 using Hexalith.Sales.CommandsWebApis.Controllers;
-using Hexalith.Sales.Domain.SalesInvoice;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
+using Hexalith.Sales.Domain.SalesInvoices;
 
 /// <summary>
 /// Class SalesWebApiHelpers.

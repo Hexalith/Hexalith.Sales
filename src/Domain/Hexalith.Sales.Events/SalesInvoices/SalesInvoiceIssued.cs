@@ -14,14 +14,14 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Sales.Events.SalesInvoice;
+namespace Hexalith.Sales.Events.SalesInvoices;
 
 using System.Collections.Immutable;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 using Hexalith.Extensions;
-using Hexalith.Sales.Domain.SalesInvoice;
+using Hexalith.Sales.Domain.SalesInvoices;
 
 /// <summary>
 /// Class SalesInvoiceRegistered.

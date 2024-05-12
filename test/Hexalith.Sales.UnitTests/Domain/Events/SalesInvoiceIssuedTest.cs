@@ -9,7 +9,7 @@ namespace Hexalith.Sales.UnitTests.Domain.Events;
 using FluentAssertions;
 
 using Hexalith.Domain.Events;
-using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.Events.SalesInvoices;
 using Hexalith.TestMocks;
 
 public class SalesInvoiceIssuedTest : PolymorphicSerializationTestBase<SalesInvoiceIssued, BaseEvent>
