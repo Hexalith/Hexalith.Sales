@@ -18,9 +18,9 @@ namespace Hexalith.Infrastructure.DaprRuntime.Sales.Helpers;
 
 using System.Diagnostics.CodeAnalysis;
 
-using Hexalith.Application.Sales.Helpers;
 using Hexalith.Extensions.Configuration;
 using Hexalith.Infrastructure.DaprRuntime.Sales.Configurations;
+using Hexalith.Sales.Application.Helpers;
 
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -55,8 +55,6 @@ public static class SalesHelper
     public static IServiceCollection AddDaprSalesClient([NotNull] this IServiceCollection services)
     {
         ArgumentNullException.ThrowIfNull(services);
-
-        // services.TryAddScoped<ICustomerQueryService, ActorCustomerQueryService>();
         return services;
     }
 }

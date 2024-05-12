@@ -14,14 +14,14 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Infrastructure.WebApis.SalesEvents.Helpers;
+namespace Hexalith.Sales.EventsWebApis.Helpers;
 
 using Hexalith.Application.Projections;
-using Hexalith.Domain.Aggregates;
-using Hexalith.Domain.Events;
 using Hexalith.Infrastructure.DaprRuntime.Helpers;
-using Hexalith.Infrastructure.WebApis.SalesEvents.Controllers;
-using Hexalith.Infrastructure.WebApis.SalesEvents.Projections;
+using Hexalith.Sales.Domain.SalesInvoice;
+using Hexalith.Sales.Events.SalesInvoice;
+using Hexalith.Sales.EventsWebApis.Controllers;
+using Hexalith.Sales.EventsWebApis.Projections;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -37,13 +37,13 @@ public static class SalesWebApiHelpers
     /// <param name="services">The services.</param>
     /// <param name="appName">Name of the application.</param>
     /// <returns>IServiceCollection.</returns>
-    /// <exception cref="System.ArgumentNullException">null.</exception>
+    /// <exception cref="ArgumentNullException">null.</exception>
     public static IServiceCollection AddSalesInvoiceProjections(this IServiceCollection services, string appName)
     {
         ArgumentNullException.ThrowIfNull(services);
         ArgumentException.ThrowIfNullOrWhiteSpace(appName);
         services.TryAddScoped<IProjectionUpdateHandler<SalesInvoiceIssued>, SalesInvoiceIssuedProjectionUpdateHandler>();
-        _ = services.AddActorProjectionFactory<SalesInvoiceState>(appName);
+        _ = services.AddActorProjectionFactory<SalesInvoice>(appName);
         _ = services
          .AddControllers()
          .AddApplicationPart(typeof(SalesInvoiceIntegrationEventsController).Assembly)

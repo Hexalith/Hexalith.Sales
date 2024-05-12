@@ -14,14 +14,14 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Infrastructure.WebApis.SalesCommands.Controllers;
+namespace Hexalith.Sales.CommandsWebApis.Controllers;
 
 using Dapr;
 
 using Hexalith.Application.Commands;
 using Hexalith.Application.States;
-using Hexalith.Domain.Aggregates;
 using Hexalith.Infrastructure.WebApis.Controllers;
+using Hexalith.Sales.Domain.Helpers;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
@@ -39,6 +39,7 @@ using Microsoft.Extensions.Logging;
 /// <param name="hostEnvironment">The host environment.</param>
 /// <param name="logger">The logger.</param>
 [ApiController]
+[Route("api/commands/sales")]
 public class SalesCommandsController(
     ICommandProcessor commandProcessor,
     IHostEnvironment hostEnvironment,
@@ -53,11 +54,11 @@ public class SalesCommandsController(
     [TopicMetadata("requireSessions", "true")]
     [TopicMetadata("sessionIdleTimeoutInSec ", "60")]
     [TopicMetadata("maxConcurrentSessions", "32")]
-    [HttpPost("/handle-salesinvoice-commands")]
+    [HttpPost("invoice")]
     public async Task<ActionResult> SubmitSalesInvoiceCommandsAsync(CommandState commandState)
         => await HandleCommandAsync(
                 commandState,
-                SalesInvoice.GetAggregateName(),
+                SalesDomainHelper.SalesInvoiceAggregateName,
                 CancellationToken.None)
             .ConfigureAwait(false);
 }

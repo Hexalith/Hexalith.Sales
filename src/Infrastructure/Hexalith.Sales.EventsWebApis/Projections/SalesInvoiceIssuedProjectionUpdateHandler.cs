@@ -14,13 +14,11 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Infrastructure.WebApis.SalesEvents.Projections;
+namespace Hexalith.Sales.EventsWebApis.Projections;
 
-using Hexalith.Domain.Aggregates;
-using Hexalith.Domain.Events;
 using Hexalith.Infrastructure.DaprRuntime.Projections;
-
-using Microsoft.Extensions.Logging;
+using Hexalith.Sales.Domain.SalesInvoice;
+using Hexalith.Sales.Events.SalesInvoice;
 
 /// <summary>
 /// Class SalesInvoiceRegisteredProjectionUpdateHandler.
@@ -30,11 +28,11 @@ using Microsoft.Extensions.Logging;
 public class SalesInvoiceIssuedProjectionUpdateHandler : SalesInvoiceProjectionUpdateHandler<SalesInvoiceIssued>
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="SalesInvoiceRegisteredProjectionUpdateHandler"/> class.
+    /// Initializes a new instance of the <see cref="SalesInvoiceIssuedProjectionUpdateHandler"/> class.
     /// </summary>
     /// <param name="factory">The factory.</param>
     /// <param name="logger">The logger.</param>
-    public SalesInvoiceIssuedProjectionUpdateHandler(IActorProjectionFactory<SalesInvoiceState> factory)
+    public SalesInvoiceIssuedProjectionUpdateHandler(IActorProjectionFactory<SalesInvoice> factory)
         : base(factory)
     {
     }

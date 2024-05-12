@@ -14,7 +14,7 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Infrastructure.WebApis.SalesCommands.Helpers;
+namespace Hexalith.Sales.CommandsWebApis.Helpers;
 
 using System.Diagnostics.CodeAnalysis;
 
@@ -22,10 +22,11 @@ using Dapr.Actors.Client;
 
 using Hexalith.Application.Aggregates;
 using Hexalith.Application.Commands;
-using Hexalith.Application.Sales.Helpers;
+using Hexalith.Sales.Application.Helpers;
 using Hexalith.Domain.Aggregates;
 using Hexalith.Infrastructure.DaprRuntime.Handlers;
-using Hexalith.Infrastructure.WebApis.SalesCommands.Controllers;
+using Hexalith.Sales.CommandsWebApis.Controllers;
+using Hexalith.Sales.Domain.SalesInvoice;
 
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;

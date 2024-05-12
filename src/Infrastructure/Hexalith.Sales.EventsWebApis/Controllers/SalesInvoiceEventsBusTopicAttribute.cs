@@ -14,10 +14,10 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Infrastructure.WebApis.SalesEvents.Controllers;
+namespace Hexalith.Sales.EventsWebApis.Controllers;
 
-using Hexalith.Domain.Aggregates;
 using Hexalith.Infrastructure.WebApis.Buses;
+using Hexalith.Sales.Domain.Helpers;
 
 /// <summary>
 /// Class SalesInvoiceEventsBusTopicAttribute. This class cannot be inherited.
@@ -31,7 +31,7 @@ public sealed class SalesInvoiceEventsBusTopicAttribute : EventBusTopicAttribute
     /// Initializes a new instance of the <see cref="SalesInvoiceEventsBusTopicAttribute"/> class.
     /// </summary>
     public SalesInvoiceEventsBusTopicAttribute()
-        : base(SalesInvoice.GetAggregateName())
+        : base(SalesDomainHelper.SalesInvoiceAggregateName)
     {
     }
 }

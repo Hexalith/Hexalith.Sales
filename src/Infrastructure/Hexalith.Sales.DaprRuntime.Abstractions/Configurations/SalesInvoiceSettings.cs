@@ -17,8 +17,8 @@
 namespace Hexalith.Infrastructure.DaprRuntime.Sales.Configurations;
 
 using Hexalith.Application.Configurations;
-using Hexalith.Domain.Aggregates;
 using Hexalith.Extensions.Configuration;
+using Hexalith.Sales.Domain.Helpers;
 
 /// <summary>
 /// Class InvoiceSettings.
@@ -37,5 +37,5 @@ public class SalesInvoiceSettings : ISettings
     /// The configuration section name of the settings.
     /// </summary>
     /// <returns>The name.</returns>
-    public static string ConfigurationName() => nameof(SalesInvoice);
+    public static string ConfigurationName() => SalesDomainHelper.SalesInvoiceAggregateName;
 }

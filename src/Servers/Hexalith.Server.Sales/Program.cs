@@ -4,9 +4,9 @@
 //     See LICENSE file in the project root for full license information.
 // </copyright>
 
-using Hexalith.Infrastructure.DaprRuntime.Sales.Helpers;
 using Hexalith.Infrastructure.WebApis.Helpers;
-using Hexalith.Infrastructure.WebApis.SalesCommands.Helpers;
+using Hexalith.Sales.CommandsWebApis.Helpers;
+using Hexalith.Sales.DaprRuntime.Helpers;
 using Hexalith.Server.Sales;
 
 WebApplicationBuilder builder = HexalithWebApi.CreateApplication(

@@ -14,15 +14,15 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Infrastructure.WebApis.SalesEvents.Controllers;
+namespace Hexalith.Sales.EventsWebApis.Controllers;
 
 using Dapr;
 
 using Hexalith.Application.Events;
 using Hexalith.Application.Projections;
 using Hexalith.Application.States;
-using Hexalith.Domain.Aggregates;
 using Hexalith.Infrastructure.WebApis.Controllers;
+using Hexalith.Sales.Domain.Helpers;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
@@ -60,7 +60,7 @@ public abstract class SalesInvoiceIntegrationEventsController(
     public async Task<ActionResult> HandleSalesInvoiceEventsAsync(EventState eventState)
          => await HandleEventAsync(
                 eventState,
-                SalesInvoice.GetAggregateName(),
+                SalesDomainHelper.SalesInvoiceAggregateName,
                 CancellationToken.None)
              .ConfigureAwait(false);
 }

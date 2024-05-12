@@ -14,7 +14,7 @@
 // <summary></summary>
 // ***********************************************************************
 
-namespace Hexalith.Sales.Application.SalesInvoice.Helpers;
+namespace Hexalith.Sales.Application.Helpers;
 
 using FluentValidation;
 

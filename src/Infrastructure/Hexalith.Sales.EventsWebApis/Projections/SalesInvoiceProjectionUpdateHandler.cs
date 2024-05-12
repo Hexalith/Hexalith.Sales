@@ -1,52 +1,39 @@
-﻿// ***********************************************************************
-// Assembly         : Hexalith.Infrastructure.WebApis.SalesEvents
-// Author           : Jérôme Piquot
-// Created          : 11-12-2023
-//
-// Last Modified By : Jérôme Piquot
-// Last Modified On : 11-12-2023
-// ***********************************************************************
-// <copyright file="SalesInvoiceProjectionUpdateHandler.cs" company="Fiveforty SAS Paris France">
-//     Copyright (c) Fiveforty SAS Paris France. All rights reserved.
-//     Licensed under the MIT license.
-//     See LICENSE file in the project root for full license information.
-// </copyright>
-// <summary></summary>
-// ***********************************************************************
-
-namespace Hexalith.Infrastructure.WebApis.SalesEvents.Projections;
+﻿namespace Hexalith.Sales.EventsWebApis.Projections;
 
 using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using System.Threading.Tasks;
 
 using Hexalith.Application.Metadatas;
-using Hexalith.Domain.Aggregates;
-using Hexalith.Domain.Events;
 using Hexalith.Infrastructure.DaprRuntime.Projections;
+using Hexalith.Sales.Domain.SalesInvoice;
+using Hexalith.Sales.Events.SalesInvoice;
 
 /// <summary>
-/// Class SalesInvoiceProjectionUpdateHandler.
-/// Implements the <see cref="ProjectionUpdateHandler{TSalesInvoiceEvent}" />.
+/// Sales invoice projection update handler base class.
+/// Implements the <see cref="Hexalith.Infrastructure.DaprRuntime.Projections.KeyValueActorProjectionUpdateEventHandlerBase{TSalesInvoiceEvent, Hexalith.Sales.Domain.SalesInvoice.SalesInvoice}" />.
 /// </summary>
-/// <typeparam name="TSalesInvoiceEvent">The type of the t customer event.</typeparam>
-/// <seealso cref="ProjectionUpdateHandler{TSalesInvoiceEvent}" />
-/// <remarks>
-/// Initializes a new instance of the <see cref="SalesInvoiceProjectionUpdateHandler{TSalesInvoiceEvent}"/> class.
-/// </remarks>
-/// <param name="factory">The factory.</param>
-/// <param name="logger">The logger.</param>
-public abstract partial class SalesInvoiceProjectionUpdateHandler<TSalesInvoiceEvent>(IActorProjectionFactory<SalesInvoiceState> factory)
-    : KeyValueActorProjectionUpdateEventHandlerBase<TSalesInvoiceEvent, SalesInvoiceState>(factory)
+/// <typeparam name="TSalesInvoiceEvent">The type of the t sales invoice event.</typeparam>
+/// <seealso cref="Hexalith.Infrastructure.DaprRuntime.Projections.KeyValueActorProjectionUpdateEventHandlerBase{TSalesInvoiceEvent, Hexalith.Sales.Domain.SalesInvoice.SalesInvoice}" />
+public class SalesInvoiceProjectionUpdateHandler<TSalesInvoiceEvent> : KeyValueActorProjectionUpdateEventHandlerBase<TSalesInvoiceEvent, SalesInvoice>
     where TSalesInvoiceEvent : SalesInvoiceEvent
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SalesInvoiceProjectionUpdateHandler{T}"/> class.
+    /// </summary>
+    /// <param name="factory">The actor projection factory.</param>
+    protected SalesInvoiceProjectionUpdateHandler(IActorProjectionFactory<SalesInvoice> factory)
+        : base(factory)
+    {
+    }
+
     /// <inheritdoc/>
     public override async Task ApplyAsync([NotNull] TSalesInvoiceEvent baseEvent, IMetadata metadata, CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(baseEvent);
         if (baseEvent is SalesInvoiceIssued issued)
         {
-            await SaveProjectionAsync(baseEvent.AggregateId, new SalesInvoiceState(issued), cancellationToken).ConfigureAwait(false);
+            await SaveProjectionAsync(baseEvent.AggregateId, new SalesInvoice(issued), cancellationToken).ConfigureAwait(false);
         }
     }
 }
