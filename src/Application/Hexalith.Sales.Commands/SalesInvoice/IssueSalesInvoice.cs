@@ -16,6 +16,7 @@
 
 namespace Hexalith.Sales.Commands.SalesInvoice;
 
+using System.Collections.Immutable;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
@@ -57,7 +58,7 @@ public class IssueSalesInvoice : SalesInvoiceCommand
         CreatedDate = createdDate;
         CustomerId = customerId;
         CurrencyId = currencyId;
-        Lines = lines.Select(p => new SalesInvoiceLine(p)).ToList();
+        Lines = lines.ToImmutableList();
     }
 
     /// <summary>

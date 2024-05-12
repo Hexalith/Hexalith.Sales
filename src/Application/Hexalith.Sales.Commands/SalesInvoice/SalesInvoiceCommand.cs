@@ -19,7 +19,7 @@ namespace Hexalith.Sales.Commands.SalesInvoice;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
-using Hexalith.Application.Organizations.Commands;
+using Hexalith.Application.Commands;
 using Hexalith.Domain.Events;
 using Hexalith.Extensions;
 using Hexalith.Sales.Domain.Helpers;
