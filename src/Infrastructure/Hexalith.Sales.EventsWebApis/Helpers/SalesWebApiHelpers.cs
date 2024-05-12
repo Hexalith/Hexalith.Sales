@@ -1,20 +1,6 @@
-﻿// ***********************************************************************
-// Assembly         : Hexalith.Infrastructure.WebApis.Sales
-// Author           : Jérôme Piquot
-// Created          : 10-27-2023
-//
-// Last Modified By : Jérôme Piquot
-// Last Modified On : 10-27-2023
-// ***********************************************************************
-// <copyright file="SalesWebApiHelpers.cs" company="Fiveforty SAS Paris France">
-//     Copyright (c) Fiveforty SAS Paris France. All rights reserved.
-//     Licensed under the MIT license.
-//     See LICENSE file in the project root for full license information.
-// </copyright>
-// <summary></summary>
-// ***********************************************************************
+﻿namespace Hexalith.Sales.EventsWebApis.Helpers;
 
-namespace Hexalith.Sales.EventsWebApis.Helpers;
+using System.Diagnostics.CodeAnalysis;
 
 using Hexalith.Application.Projections;
 using Hexalith.Infrastructure.DaprRuntime.Helpers;
@@ -27,23 +13,24 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 /// <summary>
-/// Class SalesWebApiHelpers.
+/// Sales web api helpers.
 /// </summary>
 public static class SalesWebApiHelpers
 {
     /// <summary>
     /// Adds the customer projections.
     /// </summary>
-    /// <param name="services">The services.</param>
-    /// <param name="appName">Name of the application.</param>
+    /// <param name="services">The services collection.</param>
+    /// <param name="applicationId">The application identifier.</param>
     /// <returns>IServiceCollection.</returns>
-    /// <exception cref="ArgumentNullException">null.</exception>
-    public static IServiceCollection AddSalesInvoiceProjections(this IServiceCollection services, string appName)
+    /// <exception cref="ArgumentNullException">Service is null.</exception>
+    /// <exception cref="ArgumentException">Application identifier is empty.</exception>
+    public static IServiceCollection AddSalesInvoiceProjections([NotNull] this IServiceCollection services, [NotNull] string applicationId)
     {
         ArgumentNullException.ThrowIfNull(services);
-        ArgumentException.ThrowIfNullOrWhiteSpace(appName);
+        ArgumentException.ThrowIfNullOrWhiteSpace(applicationId);
         services.TryAddScoped<IProjectionUpdateHandler<SalesInvoiceIssued>, SalesInvoiceIssuedProjectionUpdateHandler>();
-        _ = services.AddActorProjectionFactory<SalesInvoice>(appName);
+        _ = services.AddActorProjectionFactory<SalesInvoice>(applicationId);
         _ = services
          .AddControllers()
          .AddApplicationPart(typeof(SalesInvoiceIntegrationEventsController).Assembly)
