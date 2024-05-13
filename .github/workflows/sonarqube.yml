@@ -44,7 +44,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Hexalith_Hexalith.Parties" /o:"hexalith" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"Hexalith_Hexalith.Sales" /o:"hexalith" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build './src/Domain/Hexalith.Sales.Domain.Abstractions/Hexalith.Sales.Domain.Abstractions.csproj' --configuration Release -p:Version=${{ env.VERSION }}
           dotnet build './src/Domain/Hexalith.Sales.Events/Hexalith.Sales.Events.csproj' --configuration Release -p:Version=${{ env.VERSION }}
           dotnet build './src/Domain/Hexalith.Sales.Domain/Hexalith.Sales.Domain.csproj' --configuration Release -p:Version=${{ env.VERSION }}
