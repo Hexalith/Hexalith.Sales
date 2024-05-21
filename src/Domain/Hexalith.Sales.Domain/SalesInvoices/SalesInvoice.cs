@@ -23,6 +23,7 @@ using System.Runtime.Serialization;
 using Hexalith.Domain.Aggregates;
 using Hexalith.Domain.Events;
 using Hexalith.Domain.Exceptions;
+using Hexalith.Domain.Messages;
 using Hexalith.Sales.Domain.Helpers;
 using Hexalith.Sales.Events.SalesInvoices;
 
@@ -79,7 +80,7 @@ public record SalesInvoice(
     }
 
     /// <inheritdoc/>
-    public override (IAggregate Aggregate, IEnumerable<BaseEvent> Events) Apply([NotNull] BaseEvent domainEvent)
+    public override (IAggregate Aggregate, IEnumerable<BaseMessage> Messages) Apply([NotNull] BaseEvent domainEvent)
     {
         ArgumentNullException.ThrowIfNull(domainEvent);
         if (domainEvent is SalesInvoiceIssued issued)
